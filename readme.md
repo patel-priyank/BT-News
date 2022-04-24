@@ -10,3 +10,5 @@ A simple website to check the latest news, built using vanilla JavaScript. Check
 - Sort search results
 - Card View and List View (preference is saved)
 - Dark Mode (preference is saved)
+
+**Note:** To run the application, please download the files locally and use the [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in VS Code. This is due to the API limitations.
