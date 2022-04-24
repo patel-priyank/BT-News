@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BT News</title>
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="scroll-up-btn"><a href="#">Scroll to top</a></div>
+
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="max-width">
+      <div class="logo">BT News</div>
+      <div class="nav-items">
+        <div class="search-box">
+          <input type="text" placeholder="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <span class="headlines-btn" title="Headlines"><i class="fa-solid fa-newspaper"></i></span>
+        <span class="theme-switch" title="Switch theme"><i class="fa-solid fa-moon"></i></span>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="max-width">
+      <!-- title -->
+      <div class="title">
+        <h2>Headlines</h2>
+        <div class="select-view">
+          <span class="btn-card-view selected">Card View</span>
+          <span class="btn-list-view">List View</span>
+        </div>
+      </div>
+
+      <!-- filters -->
+      <div class="filters">
+        <!-- date range filter -->
+        <div class="date-range-filter">
+          <div>
+            <span>Show results from</span>
+            <select name="date-range-selector" id="date-range-selector">
+              <option value="anyTime" selected>Any time</option>
+              <option value="pastDay">Past day</option>
+              <option value="pastMonth">Past month</option>
+              <option value="pastYear">Past year</option>
+              <option value="customRange">Custom range</option>
+            </select>
+          </div>
+          <div class="custom-range-selector">
+            <input type="date" id="custom-from-date">
+            <span>to</span>
+            <input type="date" id="custom-to-date">
+          </div>
+        </div>
+
+        <!-- sort by filter -->
+        <div class="sort-by-filter">
+          <span>Sort by</span>
+          <select name="sort-by-selector" id="sort-by-selector">
+            <option value="relevancy">Relevancy</option>
+            <option value="popularity">Popularity</option>
+            <option value="publishedAt" selected>Published at</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- news content -->
+      <div class="news-content card-view">
+        <!-- loader -->
+        <div class="loader-container show">
+          <div class="loader"></div>
+        </div>
+
+        <!-- error-message -->
+        <div class="error-container">
+          <div class="error-message">
+            <div></div>
+            <div class="refresh">Refresh</div>
+          </div>
+        </div>
+
+        <!-- articles -->
+        <ul></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script -->
+  <script src="./script.js"></script>
+</body>
+
+</html>
